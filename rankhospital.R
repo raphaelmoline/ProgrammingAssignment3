@@ -28,6 +28,18 @@ rankhospital <- function(state, outcome, num = "best") {
         extract <- extract[order(extract[,3],extract[,1]),]
     }
     
+    #heart failure case
+    if (outcome == "heart failure") {
+        extract <- extract[complete.cases(extract[,4]),]
+        extract <- extract[order(extract[,4],extract[,1]),]
+    }
+    
+    #heart pneumonia case
+    if (outcome == "pneumonia") {
+        extract <- extract[complete.cases(extract[,5]),]
+        extract <- extract[order(extract[,5],extract[,1]),]
+    }
+    
     if (num == "best") {num <- 1}
     if (num == "worst") {num <- dim(extract)[1]}
     extract[num,1]
