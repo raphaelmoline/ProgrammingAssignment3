@@ -10,7 +10,7 @@ rankhospital <- function(state, outcome, num = "best") {
     }
     ## Return hospital name in that state with the given rank
     # extract the subset of data for state and mortality rates
-    extract <- dataset[dataset[,7] == state,c(2,7,11,17,25)]
+    extract <- dataset[dataset[,7] == state,c(2,7,11,17,23)]
     
     #rename columns
     colnames(extract)[3] <- "Attack"

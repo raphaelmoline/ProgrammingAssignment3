@@ -7,7 +7,7 @@ rankall <- function(outcome, num = "best") {
     }
     ## For each state, find the hospital of the given rank
     # extract the subset of data for state and mortality rates
-    extract <- dataset[,c(2,7,11,17,25)]
+    extract <- dataset[,c(2,7,11,17,23)]
     
     #note: code refactoring to be considered and use an variable value depending on outcome to avoid code repetition (i=3/4/5)
     
